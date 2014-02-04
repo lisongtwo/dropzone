@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>File Upload New Design</title>
+    <meta name="description" content="File Upload" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/bootstrap-theme.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/app.css" type="text/css" media="all">
+
+    <!--<script src="/js/lib/jquery1.7.2.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="center-block" style="width:900px;">
+        <h1>New Noosh File Uploader</h1>
+        <div id="myDropzone" style="height:200px;border:1px solid black;">
+        </div>
+        <div id="mySharing" class="clearfix" style="margin:10px 0 10px 0;display:none;border:1px solid black;padding-top:10px;">
+            <div class="col-md-7">
+                <ul class="list-group">
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <input type="checkbox">Shared with team<br>
+                <button type="button" class="btn btn-primary update-sharing">Update</button>
+            </div>
+        </div>
+        <div id="myTable" style="margin-top:10px;border:1px solid black;">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Uploaded By</th>
+                    <th>Uploaded On</th>
+                    <th>Sharing</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/sea/sea.js"></script>
+    <script>
+        ;(function(global){
+            seajs.config({
+                base:       './js',
+                plugins:    ['shim', /*'nocache',*/ 'style', 'text'],
+                alias:  {
+                    underscore: 'lib/underscore-1.5.2',
+                    backbone:   'lib/backbone-1.0.0',
+                    dropzone:   'lib/dropzone',
+                    cookie:     'lib/jquery.cookie'
+                },
+                map: [
+                    ['.js', '.js?v=1']
+                ]
+            });
+
+            seajs.use('./js/app/main', function(main){
+                main.init();
+            });
+        })(this);
+    </script>
+</body>
+</html>

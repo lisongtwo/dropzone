@@ -1,0 +1,21 @@
+.dz-preview{
+	width: 120px;
+	height: 160px;
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	background: #ccffbb;
+}
+
+.dz-filename{
+	height: 1.2em;
+	overflow: hidden;
+}
+
+.dz-success-mark{
+	display: none;
+}
+
+.dz-error-mark{
+	display: none;
+}
